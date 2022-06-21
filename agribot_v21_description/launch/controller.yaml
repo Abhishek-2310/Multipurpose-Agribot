@@ -1,0 +1,35 @@
+agribot_v2:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  wheel_front_right_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: wheel_front_right_joint
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+  wheel_front_left_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: wheel_front_left_joint
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+  wheel_back_left_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: wheel_back_left_joint
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+  wheel_back_right_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: wheel_back_right_joint
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+  seeder_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: seeder_joint
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+  yaw_position_controller:
+    type: position_controllers/JointPositionController
+    joint: yaw
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+  pitch_position_controller:
+    type: position_controllers/JointPositionController
+    joint: pitch
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
