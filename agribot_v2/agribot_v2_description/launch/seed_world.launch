@@ -1,0 +1,20 @@
+<launch>
+  <param command="$(find xacro)/xacro $(find agribot_v2_description)/urdf/agribot_v2.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model agribot_v2" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find agribot_world)/worlds/seeding.world"/>
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <include file="$(find agribot_v2_description)/launch/controller.launch"/>
+
+  <arg default="true" name="gui"/>
+  <arg default="$(find agribot_v2_description)/launch/seeder.rviz" name="rvizconfig"/>
+  <param name="use_gui" value="$(arg gui)"/>
+  <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
+
+</launch>
