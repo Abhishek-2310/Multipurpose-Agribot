@@ -1,1 +1,1 @@
-This contains the required files and source codes for running the simulation on our proposed Multipurpose Agricultural Robot.
+This repository is a collection of files including source codes, simulations, CAD models and documentation created to validate our proposed Multipurpose Agricultural Robot.
