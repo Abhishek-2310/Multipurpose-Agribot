@@ -2,7 +2,8 @@
 
 This repository contains a collection of files including source codes, simulations, CAD models and documentation created by our team to validate our proposed Multipurpose Agricultural Robot.
 
-<img src="https://user-images.githubusercontent.com/101731831/180657955-475cdbe7-f38d-4b61-881a-f6c2c7e458a9.png" alt="alternatetext" width="500" height="370">
+<!-- <img src="https://user-images.githubusercontent.com/101731831/180657955-475cdbe7-f38d-4b61-881a-f6c2c7e458a9.png" alt="alternatetext" width="500" height="370">
+-->
 
 <h2>Abstract</h2>
 
